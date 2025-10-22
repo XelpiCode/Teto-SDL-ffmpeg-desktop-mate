@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Teto-SFML-ffmpeg-desktop-mate.iml" filepath="$PROJECT_DIR$/.idea/Teto-SFML-ffmpeg-desktop-mate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Teto-SDL-ffmpeg-desktop-mate.iml" filepath="$PROJECT_DIR$/.idea/Teto-SDL-ffmpeg-desktop-mate.iml" />
     </modules>
   </component>
 </project>
