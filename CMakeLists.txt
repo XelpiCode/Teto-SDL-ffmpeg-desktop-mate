@@ -7,7 +7,7 @@ else()
 endif()
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build all libs static" FORCE)
 
-project(Teto_SFML_ffmpeg_desktop_mate)
+project(Teto_SDL_ffmpeg_desktop_mate)
 set(CMAKE_CXX_STANDARD 23)
 
 set(SDL_SHARED OFF CACHE BOOL "Build SDL shared" FORCE)
@@ -16,15 +16,15 @@ set(SDL_STATIC ON  CACHE BOOL "Build SDL static" FORCE)
 add_subdirectory("thirdparty/SDL" EXCLUDE_FROM_ALL)
 
 file(GLOB_RECURSE MY_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
-add_executable(Teto_SFML_ffmpeg_desktop_mate "${MY_SOURCES}")
+add_executable(Teto_SDL_ffmpeg_desktop_mate "${MY_SOURCES}")
 
-target_link_libraries(Teto_SFML_ffmpeg_desktop_mate PRIVATE
+target_link_libraries(Teto_SDL_ffmpeg_desktop_mate PRIVATE
     SDL3::SDL3-static
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
-    target_compile_definitions(Teto_SFML_ffmpeg_desktop_mate PUBLIC RESOURCES_PATH="./resources/")
+    target_compile_definitions(Teto_SDL_ffmpeg_desktop_mate PUBLIC RESOURCES_PATH="./resources/")
 else()
     # For IDE development
-    target_compile_definitions(Teto_SFML_ffmpeg_desktop_mate PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+    target_compile_definitions(Teto_SDL_ffmpeg_desktop_mate PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 endif()
